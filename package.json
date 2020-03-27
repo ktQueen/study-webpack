@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/ktQueen/study-webpack#readme",
   "dependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "babel-loader": "^8.0.0-beta.0",
     "html-webpack-plugin": "^4.0.2"
   },
   "devDependencies": {
