@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= htmlWebpackPlugin.options.title%></title>
+    <script type="text/javascript">
+        <%= htmlWebpackPlugin.files.chunks %>
+    </script>
 </head>
 <body>
     我是根目录下
+
     <%= htmlWebpackPlugin.options.date %>
      
     <% for(var key in htmlWebpackPlugin) { %>
@@ -27,5 +31,6 @@
     <% for(var key in htmlWebpackPlugin.options) { %>
         <%= key %>：<%= JSON.stringify(htmlWebpackPlugin.options[key]) %>
     <% } %>
+    <!-- 123注释 -->
 </body>
 </html>

@@ -27,7 +27,9 @@ const config={
         // 名称
         // hash每一次打包每个文件hash是一样的
         // chunkhash每次打包每个文件hash不一样，只要文件变了生成的hash就会修改，文件没有修改hash不做改动
-        filename:'js/[name]-[chunkhash].js'
+        filename:'js/[name]-[chunkhash].js',
+        // 占位符，你在html引用后的js路径，上线后就会用这个字符替换为这个开头的一个路径
+        publicPath:'http://www.com'
     },
     // loader,遇到什么文件先用什么loader转换一下
     module:{
@@ -45,6 +47,7 @@ const config={
     },
     // 插件
     plugins:[
+        // 多页面就配置多个
         new HtmlWebpackPlugin({
             // 文件名
             // filename:'index-[hash].html',
@@ -52,10 +55,36 @@ const config={
             // 模版
             template:'index.html',
             // 脚本放在头部还是body
-            inject:'head',
+            // inject:'head',
+            // inject:false,
             // 传参在模版中引用
             title:'123213',
-            date:new Date()
+            date:new Date(),
+            // html文件压缩
+            minify:{
+                // 删除注释
+                removeComments:true,
+                // 删除空格
+                collapseWhitespace:true
+            },
+            // 包含的chunk
+            chunks:['page1','page2'],
+            //排除chunk,其他的会被加载进来
+            excludeChunks:[]
+        }),
+        new HtmlWebpackPlugin({
+            filename:'index11.html',
+            template:'index.html',
+            inject:'head',
+            title:'大大',
+            chunks:['page2']
+        }),
+        new HtmlWebpackPlugin({
+            filename:'index22.html',
+            template:'index.html',
+            inject:'body',
+            title:'大房贷首付大',
+            chunks:['page1']
         })
     ]
 }
