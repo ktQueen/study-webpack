@@ -81,32 +81,31 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src2/app.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src2/app.js":
-/*!*********************!*\
-  !*** ./src2/app.js ***!
-  \*********************/
+/***/ "./src/script/hello1.js":
+/*!******************************!*\
+  !*** ./src/script/hello1.js ***!
+  \******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _layer = _interopRequireDefault(__webpack_require__(/*! ./components/layer/layer */ \"./src2/components/layer/layer.js\"));\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\n\nvar App = function App() {\n  console.log(_layer[\"default\"]);\n};\n\nnew App();\n\n//# sourceURL=webpack:///./src2/app.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports[\"default\"] = bar;\n\nfunction bar() {\n  //\n  console.log('hello');\n}\n\n//# sourceURL=webpack:///./src/script/hello1.js?");
 
 /***/ }),
 
-/***/ "./src2/components/layer/layer.js":
-/*!****************************************!*\
-  !*** ./src2/components/layer/layer.js ***!
-  \****************************************/
+/***/ 0:
+/*!************************************!*\
+  !*** multi ./src/script/hello1.js ***!
+  \************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports[\"default\"] = void 0;\n\n// import tpl from './layer.html'\nfunction layer() {\n  return {\n    name: 'layer' // tpl:tpl\n\n  };\n}\n\nvar _default = layer;\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack:///./src2/components/layer/layer.js?");
+eval("module.exports = __webpack_require__(/*! ./src/script/hello1.js */\"./src/script/hello1.js\");\n\n\n//# sourceURL=webpack:///multi_./src/script/hello1.js?");
 
 /***/ })
 

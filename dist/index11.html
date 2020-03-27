@@ -3,84 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>大大</title>
+    <title><%= htmlWebpackPlugin.options.title%></title>
     <script type="text/javascript">
-        
     </script>
-<script src="http://www.com/js/page2-3fe1558e6d74b8ef60a5.js"></script></head>
+<script src="js/page2.bundle.js"></script></head>
 <body>
+    <img src="images/123-83cdc.jpeg" alt="">
+    <div id="app"></div>
     我是根目录下
 
-    
+    <%= htmlWebpackPlugin.options.date %>
      
-    
-        tags
-    
-        files
-    
-        options
-    
+    <% for(var key in htmlWebpackPlugin) { %>
+        <%= key %>
+    <% } %>
 
     ===============tags==============
-    
-        headTags：[{"tagName":"script","voidTag":false,"attributes":{"defer":false,"src":"http://www.com/js/page2-3fe1558e6d74b8ef60a5.js"}}]
-    
-        bodyTags：[]
-    
+    <% for(var key in htmlWebpackPlugin.tags) { %>
+        <%= key %>：<%= JSON.stringify(htmlWebpackPlugin.tags[key]) %>
+    <% } %>
 
     ===============files==============
-    
-        publicPath："http://www.com/"
-    
-        js：["http://www.com/js/page2-3fe1558e6d74b8ef60a5.js"]
-    
-        css：[]
-    
-        manifest：
-    
-        favicon：
-    
+    <% for(var key in htmlWebpackPlugin.files) { %>
+        <%= key %>：<%= JSON.stringify(htmlWebpackPlugin.files[key]) %>
+    <% } %>
 
     ===============options==============
-    
-        template："/Users/kangting/kt/github/study-webpack/node_modules/html-webpack-plugin/lib/loader.js!/Users/kangting/kt/github/study-webpack/index.html"
-    
-        templateContent：false
-    
-        templateParameters：
-    
-        filename："index11.html"
-    
-        hash：false
-    
-        inject："head"
-    
-        scriptLoading："blocking"
-    
-        compile：true
-    
-        favicon：false
-    
-        minify："auto"
-    
-        cache：true
-    
-        showErrors：true
-    
-        chunks：["page2"]
-    
-        excludeChunks：[]
-    
-        chunksSortMode："auto"
-    
-        meta：{}
-    
-        base：false
-    
-        title："大大"
-    
-        xhtml：false
-    
+    <% for(var key in htmlWebpackPlugin.options) { %>
+        <%= key %>：<%= JSON.stringify(htmlWebpackPlugin.options[key]) %>
+    <% } %>
     <!-- 123注释 -->
 </body>
 </html>
