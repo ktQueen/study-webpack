@@ -3,11 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title><%= htmlWebpackPlugin.options.title%></title>
 </head>
 <body>
+    我是根目录下
+    <%= htmlWebpackPlugin.options.date %>
+     
+    <% for(var key in htmlWebpackPlugin) { %>
+        <%= key %>
+    <% } %>
 
-    111
-    <script src="dist/bundle.js"></script>
+    ===============tags==============
+    <% for(var key in htmlWebpackPlugin.tags) { %>
+        <%= key %>：<%= JSON.stringify(htmlWebpackPlugin.tags[key]) %>
+    <% } %>
+
+    ===============files==============
+    <% for(var key in htmlWebpackPlugin.files) { %>
+        <%= key %>：<%= JSON.stringify(htmlWebpackPlugin.files[key]) %>
+    <% } %>
+
+    ===============options==============
+    <% for(var key in htmlWebpackPlugin.options) { %>
+        <%= key %>：<%= JSON.stringify(htmlWebpackPlugin.options[key]) %>
+    <% } %>
 </body>
 </html>

@@ -27,7 +27,7 @@ const config={
         // 名称
         // hash每一次打包每个文件hash是一样的
         // chunkhash每次打包每个文件hash不一样，只要文件变了生成的hash就会修改，文件没有修改hash不做改动
-        filename:'[name]-[chunkhash].js'
+        filename:'js/[name]-[chunkhash].js'
     },
     // loader,遇到什么文件先用什么loader转换一下
     module:{
@@ -45,7 +45,18 @@ const config={
     },
     // 插件
     plugins:[
-        new HtmlWebpackPlugin({template:'./src/index.html'})
+        new HtmlWebpackPlugin({
+            // 文件名
+            // filename:'index-[hash].html',
+            filename:'index.html',
+            // 模版
+            template:'index.html',
+            // 脚本放在头部还是body
+            inject:'head',
+            // 传参在模版中引用
+            title:'123213',
+            date:new Date()
+        })
     ]
 }
 // module.exports是commonjs的模块化输出
