@@ -1,0 +1,41 @@
+{
+  "name": "study-webpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack --config webpack.config.js --progress --display-modules --colors --display-reason"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ktQueen/study-webpack.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ktQueen/study-webpack/issues"
+  },
+  "homepage": "https://github.com/ktQueen/study-webpack#readme",
+  "dependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "babel-loader": "^8.0.0-beta.0",
+    "html-webpack-plugin": "^4.0.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.5",
+    "css-loader": "^3.4.2",
+    "ejs-loader": "^0.3.5",
+    "file-loader": "^6.0.0",
+    "html-loader": "^1.0.0",
+    "image-webpack-loader": "^6.0.0",
+    "less-loader": "^5.0.0",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.1.3",
+    "url-loader": "^4.0.0",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  }
+}
