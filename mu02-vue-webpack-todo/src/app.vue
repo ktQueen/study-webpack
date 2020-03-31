@@ -1,5 +1,5 @@
 <template>
-    <div id="test">{{text}}</div>
+    <div>123</div>
 </template>
 
 <script>
@@ -7,14 +7,15 @@
         name: "app",
         data(){
             return {
-                text:'abc'
+                text:'abc1111d'
             }
-        }
+        },
+        render(){}
     }
 </script>
 
 <style scoped>
-    #test{
+    #app{
         color: red;
     }
 </style>
